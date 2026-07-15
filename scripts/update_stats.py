@@ -8,6 +8,7 @@ Precisa da env var GH_TOKEN (um Personal Access Token, veja o workflow).
 import os
 import re
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
@@ -61,6 +62,7 @@ def get_uptime():
 
     if days < 0:
         months -= 1
+        # dias no mês anterior ao mês atual
         prev_month = now.month - 1 or 12
         prev_year = now.year if now.month != 1 else now.year - 1
         from calendar import monthrange
@@ -143,6 +145,41 @@ def get_total_commits():
 # 4. Lines of code: soma de additions/deletions do autor em cada repo
 #    (usa o endpoint de contributor stats, sem precisar clonar nada)
 # ---------------------------------------------------------------------------
+def get_contributor_stats(owner, name, retries=6, delay=5):
+    """
+    O endpoint stats/contributors às vezes responde 202 com corpo vazio
+    enquanto o GitHub ainda está calculando as estatísticas do repo
+    (comum na primeira consulta). Também pode devolver 204/409 para repos
+    vazios. Aqui a gente espera e tenta de novo, e desiste sem quebrar o
+    resto do script se não conseguir depois de algumas tentativas.
+    """
+    url = f"{API}/repos/{owner}/{name}/stats/contributors"
+    for attempt in range(retries):
+        r = requests.get(url, headers=HEADERS)
+
+        if r.status_code == 202:
+            print(f"    {owner}/{name}: GitHub ainda calculando, aguardando...")
+            time.sleep(delay)
+            continue
+
+        if r.status_code in (204, 404, 409):
+            return []
+
+        try:
+            r.raise_for_status()
+        except requests.HTTPError as e:
+            print(f"    {owner}/{name}: erro {r.status_code}, pulando ({e})", file=sys.stderr)
+            return []
+
+        if not r.text.strip():
+            return []
+
+        return r.json()
+
+    print(f"    {owner}/{name}: sem resposta após {retries} tentativas, pulando", file=sys.stderr)
+    return []
+
+
 def get_lines_of_code():
     repos = []
     page = 1
@@ -166,8 +203,7 @@ def get_lines_of_code():
         if repo.get("fork"):
             continue
         owner, name = repo["owner"]["login"], repo["name"]
-        stats = gh_get(f"{API}/repos/{owner}/{name}/stats/contributors")
-        # a API às vezes devolve 202 (ainda calculando); nesse caso stats vem vazio
+        stats = get_contributor_stats(owner, name)
         if not isinstance(stats, list):
             continue
         for contributor in stats:
