@@ -1,0 +1,212 @@
+<svg viewBox="0 0 920 580" xmlns="http://www.w3.org/2000/svg"
+  font-family="'Cascadia Code','Fira Code',Consolas,'Courier New',monospace">
+  <defs>
+    <linearGradient id="artGrad" gradientUnits="userSpaceOnUse" x1="40" y1="80" x2="330" y2="345">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#58a6ff" flood-opacity="0.18" />
+    </filter>
+    <clipPath id="cardClip">
+      <rect x="20" y="20" width="880" height="520" rx="16" />
+    </clipPath>
+    <style>
+      .art {
+        white-space: pre;
+        font-family:
+          "Cascadia Mono",
+          "Fira Code",
+          Consolas,
+          monospace;
+        font-size: 8.3px;
+        fill: url(#artGrad);
+      }
+
+      .line {
+        font-size: 13.5px;
+      }
+
+      .label {
+        fill: #8b949e;
+        font-weight: 600;
+      }
+
+      .dots {
+        fill: #30363d;
+      }
+
+      .value {
+        fill: #c9d1d9;
+      }
+
+      .header {
+        font-size: 15px;
+        font-weight: 700;
+      }
+
+      .dash {
+        fill: #30363d;
+        font-size: 15px;
+      }
+
+      .title {
+        font-size: 12.5px;
+        fill: #6e7681;
+        letter-spacing: .5px;
+      }
+    </style>
+  </defs>
+
+  <rect x="20" y="20" width="880" height="520" rx="16" fill="#0d1117" stroke="#30363d" stroke-width="1.5"
+    filter="url(#cardGlow)" />
+
+  <g clip-path="url(#cardClip)">
+    <rect x="20" y="20" width="880" height="38" fill="#161b22" />
+    <line x1="20" y1="58" x2="900" y2="58" stroke="#21262d" stroke-width="1" />
+    <circle cx="46" cy="39" r="6" fill="#ff5f56" />
+    <circle cx="66" cy="39" r="6" fill="#ffbd2e" />
+    <circle cx="86" cy="39" r="6" fill="#27c93f" />
+    <text x="460" y="43.5" text-anchor="middle" class="title">tulio@heytulio — zsh</text>
+  </g>
+
+  <!-- ASCII Art: ornament/sphere with stars (source: asciiart.website/art/7058) -->
+  <text x="40" y="140" class="art" xml:space="preserve">
+    <tspan x="40" dy="0">                                              .</tspan>
+    <tspan x="40" dy="1.2em">                       *</tspan>
+    <tspan x="40" dy="1.2em">         .                       .                   .</tspan>
+    <tspan x="40" dy="1.2em">                            .               ,"`.</tspan>
+    <tspan x="40" dy="1.2em">  .                   _____                 `..'</tspan>
+    <tspan x="40" dy="1.2em">                 _,odO8O8888bo._         .</tspan>
+    <tspan x="40" dy="1.2em">              ,odOoOoOoOOOO8O888bo.                  *</tspan>
+    <tspan x="40" dy="1.2em">      *     ,dOoOoOoOoOoOO8O8O88@8@b.           .</tspan>
+    <tspan x="40" dy="1.2em">          ,d8o:o:o:o:o:ooOoOOOO8O88@8b.</tspan>
+    <tspan x="40" dy="1.2em">         do:o:o:o:o:o:ooooOoOO8O88@8@@@b</tspan>
+    <tspan x="40" dy="1.2em">.       do::.:.:.:.:.::o:ooooOOOO8888@@@b           .</tspan>
+    <tspan x="40" dy="1.2em">       .o::::.:.:.:.::::o:ooOoOO8O88@@@@@. .</tspan>
+    <tspan x="40" dy="1.2em">    .  |::.:.. . . ..:.::o:ooOoOO8O88@8@@|</tspan>
+    <tspan x="40" dy="1.2em">       |o::.:.. . ..:.::o:ooOoOO8O88@8@@@|</tspan>
+    <tspan x="40" dy="1.2em">       |::.:.. . . ..:.::o:ooOoOO8O88@8@@|</tspan>
+    <tspan x="40" dy="1.2em">       'o::::.:.:.:.::::o:ooOoOO8O88@@@@@'     .         *</tspan>
+    <tspan x="40" dy="1.2em">        Y8::.:.:.:.:.::o:ooooOOOO8888@@@P</tspan>
+    <tspan x="40" dy="1.2em">        `Y8:o:o:o:o:o:ooooOoOO8O88@8@@@P'</tspan>
+    <tspan x="40" dy="1.2em">          `Y:o:o:o:o:o:ooOoOOOO8O88@8@P     .        .</tspan>
+    <tspan x="40" dy="1.2em"> .        . `YOoOoOoOoOoOO8O8O88@8@@P'</tspan>
+    <tspan x="40" dy="1.2em">              `YoOoOoOoOOOO8O8888@P'     .</tspan>
+    <tspan x="40" dy="1.2em">                 `"*YO8O8888@P*"'</tspan>
+    <tspan x="40" dy="1.2em">        .                          *             .       .</tspan>
+    <tspan x="40" dy="1.2em"></tspan>
+    <tspan x="40" dy="1.2em">                             .                      .</tspan>
+    <tspan x="40" dy="1.2em">    *            .                       .                </tspan>
+  </text>
+
+  <line x1="352" y1="90" x2="352" y2="520" stroke="#21262d" stroke-width="1" />
+
+  <!-- Header -->
+  <text x="380" y="110">
+    <tspan class="header" fill="#3fb950">tulio@heytulio</tspan>
+    <tspan class="dash"> ────────────────────────────</tspan>
+  </text>
+
+  <!-- Info block -->
+  <text y="136" class="line">
+    <tspan x="380" class="label">Dev</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Fullstack</tspan>
+  </text>
+  <text y="156" class="line">
+    <tspan x="380" class="label">OS</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Windows 11, Debian, Ubuntu</tspan>
+  </text>
+  <text y="176" class="line">
+    <tspan x="380" class="label">Host</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Intituto Federal de Pernambuco</tspan>
+  </text>
+  <text y="196" class="line">
+    <tspan x="380" class="label">Kernel</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">System analysis and development</tspan>
+  </text>
+  <text y="216" class="line">
+    <tspan x="380" class="label">Editor</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">VS Code</tspan>
+  </text>
+  <text y="236" class="line">
+    <tspan x="380" class="label">Languages</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">JavaScript, TypeScript, Python</tspan>
+  </text>
+  <text y="256" class="line">
+    <tspan x="380" class="label">Frameworks</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Next.js, Nest.js, React</tspan>
+  </text>
+  <text y="276" class="line">
+    <tspan x="380" class="label">Databases</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">PostgreSQL, MySQL, SQLite, MongoDB</tspan>
+  </text>
+  <text y="296" class="line">
+    <tspan x="380" class="label">DevOps</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Docker, Kubernetes (k8s, k3s)</tspan>
+  </text>
+  <text y="316" class="line">
+    <tspan x="380" class="label">Hobbies</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">Games, Movies, Traveling</tspan>
+  </text>
+
+  <!-- GitHub Stats header -->
+  <text x="380" y="342">
+    <tspan class="header" fill="#d29922">GitHub Stats</tspan>
+    <tspan class="dash"> ───────────────────────────────</tspan>
+  </text>
+
+  <text y="368" class="line">
+    <tspan x="380" class="label">Uptime</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" id="stat-uptime" class="value">calculating...</tspan>
+  </text>
+  <text y="388" class="line">
+    <tspan x="380" class="label">Repos</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" id="stat-repos" class="value">--</tspan>
+    <tspan x="620" class="label">Commits:</tspan>
+    <tspan x="700" id="stat-commits" class="value">--</tspan>
+  </text>
+  <text y="408" class="line">
+    <tspan x="380" class="label">Lines of Code</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" id="stat-loc" class="value">calculating...</tspan>
+  </text>
+
+  <!-- Contact header -->
+  <text x="380" y="434">
+    <tspan class="header" fill="#58a6ff">Contact</tspan>
+    <tspan class="dash"> ───────────────────────────────────</tspan>
+  </text>
+
+  <text y="460" class="line">
+    <tspan x="380" class="label">LinkedIn</tspan>
+    <tspan x="480" class="label">:</tspan>
+    <tspan x="500" class="value">linkedin.com/in/tulio-vasc</tspan>
+  </text>
+  <text y="480" class="line">
+    <tspan x="380" class="label">Email</tspan>
+    <tspan x="480" class="dots">:</tspan>
+    <tspan x="500" class="value">contato.tuliov@outlook.com</tspan>
+  </text>
+
+  <!-- Prompt / cursor -->
+  <text x="380" y="504" class="line">
+    <tspan fill="#8b949e">tulio@heytulio</tspan>
+    <tspan class="dots">:~$ </tspan>
+    <tspan fill="#c9d1d9">_</tspan>
+    <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.4;0.5;0.9;1" dur="1.2s"
+      repeatCount="indefinite" />
+  </text>
+</svg>
