@@ -169,19 +169,19 @@
     <text y="368" class="line">
         <tspan x="380" class="label">Uptime</tspan>
         <tspan x="480" class="label">:</tspan>
-        <tspan x="500" id="stat-uptime" class="value">5 years, 5 months, 8 days</tspan>
+        <tspan x="500" id="stat-uptime" class="value">5 years, 5 months, 13 days</tspan>
     </text>
     <text y="388" class="line">
         <tspan x="380" class="label">Repos</tspan>
         <tspan x="480" class="label">:</tspan>
-        <tspan x="500" id="stat-repos" class="value">14</tspan>
+        <tspan x="500" id="stat-repos" class="value">15</tspan>
         <tspan x="620" class="label">Commits:</tspan>
-        <tspan x="700" id="stat-commits" class="value">85</tspan>
+        <tspan x="700" id="stat-commits" class="value">90</tspan>
     </text>
     <text y="408" class="line">
         <tspan x="380" class="label">Lines of Code</tspan>
         <tspan x="480" class="label">:</tspan>
-        <tspan x="500" id="stat-loc" class="value">25.998 (+24.320 / -1.678)</tspan>
+        <tspan x="500" id="stat-loc" class="value">35.959 (+33.395 / -2.564)</tspan>
     </text>
 
     <!-- Contact header -->
