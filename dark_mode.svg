@@ -169,7 +169,7 @@
   <text y="368" class="line">
     <tspan x="380" class="label">Uptime</tspan>
     <tspan x="480" class="label">:</tspan>
-    <tspan x="500" id="stat-uptime" class="value">5 years, 6 months, 3 days</tspan>
+    <tspan x="500" id="stat-uptime" class="value">5 years, 6 months, 10 days</tspan>
   </text>
   <text y="388" class="line">
     <tspan x="380" class="label">Repos</tspan>
